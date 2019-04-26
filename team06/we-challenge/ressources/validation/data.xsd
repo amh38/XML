@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="wgchallenge">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="users">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="user" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+
+                    <xs:key name="userkey">
+                        <xs:selector xpath="user"/>
+                        <xs:field xpath="username"/>
+                    </xs:key>
+                    <xs:keyref name="ownerkeyref" refer="userkey">
+                        <xs:selector xpath="wgchallenge/events/event"/>
+                        <xs:field xpath="owner"/>
+                    </xs:keyref>
+                    <xs:keyref name="memberkeyref" refer="userkey">
+                        <xs:selector xpath="wgchallenge/events/event/members/member"/>
+                        <xs:field xpath="name"/>
+                    </xs:keyref>
+                </xs:element>
+                <xs:element name="events">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="event" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="eventID">
+                        <xs:selector xpath="event"/>
+                        <xs:field xpath="@id"/>
+                    </xs:key>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="user">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="countResidents" type="residentType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="clothesWasher" type="booleanUndefined" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="dishwasher" type="booleanUndefined" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="location" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="profilePicture" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="type" type="typeType" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="event">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:string" name="name"/>
+                <xs:element type="xs:date" name="startdate"/>
+                <xs:element type="xs:date" name="enddate"/>
+                <xs:element type="xs:positiveInteger" name="minResidents"/>
+				<xs:element type="booleanUndefined" name="reqCW"/>
+				<xs:element type="booleanUndefined" name="reqDW"/>
+				<xs:element type="xs:string" name="description"/>
+				<xs:element type="xs:string" name="owner" minOccurs="1" maxOccurs="1"/>
+                <xs:element type="membersType" name="members"/>
+            </xs:sequence>
+            <xs:attribute type="xs:positiveInteger" name="id"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="empty">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value=" "/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="residentType">
+        <xs:restriction base="xs:byte">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="typeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="WG"/>
+            <xs:enumeration value="Firma"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="booleanUndefined">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="undefined"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="membersType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+
+			<xs:element name="member">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element type="xs:string" name="name"/>
+						<xs:element	type="xs:string" name="eventpic"/>
+                        <xs:element type="xs:integer" name="totalVotes"/>
+                        <xs:element type="xs:integer" name="positiveVotes"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

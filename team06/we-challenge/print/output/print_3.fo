@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"><fo:layout-master-set><fo:simple-page-master master-name="participant_list" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="2cm" margin-left="2.5cm" margin-right="2.5cm"><fo:region-body margin-top="1cm"/><fo:region-before extent="2cm"/><fo:region-after extent="3cm"/></fo:simple-page-master></fo:layout-master-set><fo:page-sequence master-reference="participant_list"><fo:static-content flow-name="xsl-region-before"><fo:block text-align="center" font-size="8pt">
+                Event:  TestEvent3 / Page: 
+                <fo:page-number/></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body"><fo:block font-size="20">Event Titel: TestEvent3</fo:block><fo:block font-size="19pt" font-family="sans-serif" line-height="24pt" space-after.optimum="20pt" color="white" text-align="center" padding-top="5pt" padding-bottom="5pt"><fo:table space-after.optimum="20pt" width="13cm" font-size="11pt" margin-top="2cm" background-color="#BDBDBD"><fo:table-column column-number="1"/><fo:table-column column-number="2"/><fo:table-body><fo:table-row><fo:table-cell number-columns-spanned="2"><fo:block>
+                    Namen der WG: 123</fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block>
+                    Totale Anzahl Bewertungen
+                </fo:block></fo:table-cell><fo:table-cell><fo:block>7</fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block>
+                    Positive Bewertungen
+                </fo:block></fo:table-cell><fo:table-cell><fo:block>7</fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table><fo:table space-after.optimum="20pt" width="13cm" font-size="11pt" margin-top="2cm" background-color="#BDBDBD"><fo:table-column column-number="1"/><fo:table-column column-number="2"/><fo:table-body><fo:table-row><fo:table-cell number-columns-spanned="2"><fo:block>
+                    Namen der WG: ste</fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block>
+                    Totale Anzahl Bewertungen
+                </fo:block></fo:table-cell><fo:table-cell><fo:block>13</fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block>
+                    Positive Bewertungen
+                </fo:block></fo:table-cell><fo:table-cell><fo:block>7</fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:flow></fo:page-sequence></fo:root>

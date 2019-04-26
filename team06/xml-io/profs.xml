@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hslu>
+    <prof teaches="XML">Marc Pouly</prof>
+    <prof teaches="IOS">Ruedi Arnold</prof>
+    <prof teaches="PRG1" boss="true">Hansjörg Diethelm</prof>
+</hslu>

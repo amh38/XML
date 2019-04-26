@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wgchallenge xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validation/data.xsd">
+	<users>
+		<user type="WG">
+			<username>testWG</username>
+			<countResidents>3</countResidents>
+			<clothesWasher>false</clothesWasher>
+			<dishwasher>true</dishwasher>
+			<location>Zurich</location>
+			<profilePicture>../ressources/profile_pictures/testWG.png</profilePicture>
+		</user>
+		<user type="Firma">
+			<username>testFirma</username>
+			<countResidents>0</countResidents>
+			<clothesWasher>undefined</clothesWasher>
+			<dishwasher>undefined</dishwasher>
+			<location>Zurich</location>
+			<profilePicture>../ressources/profile_pictures/testFirma.jpg</profilePicture>
+		</user>
+		<user type="WG">
+			<username>1234</username>
+			<countResidents>5</countResidents>
+			<clothesWasher>false</clothesWasher>
+			<dishwasher>false</dishwasher>
+			<location>undefined</location>
+			<profilePicture>undefined</profilePicture>
+		</user>
+		<user type="WG">
+			<username>testWGawdawd</username>
+			<countResidents>0</countResidents>
+			<clothesWasher>undefined</clothesWasher>
+			<dishwasher>undefined</dishwasher>
+			<location>undefined</location>
+			<profilePicture>undefined</profilePicture>
+		</user>
+		<user type="WG">
+			<username>testWGawdawdasdadwad</username>
+			<countResidents>0</countResidents>
+			<clothesWasher>undefined</clothesWasher>
+			<dishwasher>undefined</dishwasher>
+			<location>undefined</location>
+			<profilePicture>undefined</profilePicture>
+		</user>
+		<user type="Firma">
+			<username>testComp</username>
+			<countResidents>0</countResidents>
+			<clothesWasher>undefined</clothesWasher>
+			<dishwasher>undefined</dishwasher>
+			<location>undefined</location>
+			<profilePicture>undefined</profilePicture>
+		</user>
+		<user type="WG">
+			<username>testWG2</username>
+			<countResidents>0</countResidents>
+			<clothesWasher>false</clothesWasher>
+			<dishwasher>true</dishwasher>
+			<location>undefined</location>
+			<profilePicture>undefined</profilePicture>
+		</user>
+		<user type="Firma">
+			<username>stefkueng</username>
+			<countResidents>0</countResidents>
+			<clothesWasher>undefined</clothesWasher>
+			<dishwasher>undefined</dishwasher>
+			<location>undefined</location>
+			<profilePicture>undefined</profilePicture>
+		</user>
+		<user type="WG">
+			<username>ste</username>
+			<countResidents>2</countResidents>
+			<clothesWasher>undefined</clothesWasher>
+			<dishwasher>undefined</dishwasher>
+			<location>undefined</location>
+			<profilePicture>undefined</profilePicture>
+		</user>
+	</users>
+	<events>
+		<event id="1">
+			<name>TestEvent</name>
+			<startdate>2019-01-01</startdate>
+			<enddate>2019-01-02</enddate>
+			<minResidents>2</minResidents>
+			<reqCW>false</reqCW>
+			<reqDW>false</reqDW>
+			<description>testDescription</description>
+			<owner>testFirma</owner>
+			<members>
+				<member>
+					<name>testWG</name>
+					<eventpic/>
+					<totalVotes>0</totalVotes>
+					<positiveVotes>0</positiveVotes>
+				</member>
+				<member>
+					<name>testWGawdawd</name>
+					<eventpic/>
+					<totalVotes>0</totalVotes>
+					<positiveVotes>0</positiveVotes>
+				</member>
+				<member>
+					<name>ste</name>
+					<eventpic>../ressources/participant_pictures/1_ste.jpg</eventpic>
+					<totalVotes>0</totalVotes>
+					<positiveVotes>0</positiveVotes>
+				</member>
+				<member>
+					<name>ste</name>
+					<eventpic>../ressources/participant_pictures/1_ste.jpg</eventpic>
+					<totalVotes>0</totalVotes>
+					<positiveVotes>0</positiveVotes>
+				</member>
+			</members>
+		</event>
+		<event id="2">
+			<name>TestEvent2</name>
+			<startdate>2019-01-01</startdate>
+			<enddate>2019-01-02</enddate>
+			<minResidents>2</minResidents>
+			<reqCW>false</reqCW>
+			<reqDW>false</reqDW>
+			<description>testDescription</description>
+			<owner>testFirma</owner>
+			<members>
+				<member>
+					<name>testWGawdawd</name>
+					<eventpic/>
+					<totalVotes>0</totalVotes>
+					<positiveVotes>0</positiveVotes>
+				</member>
+			</members>
+		</event>
+		<event id="3">
+			<name>TestEvent3</name>
+			<startdate>2019-01-01</startdate>
+			<enddate>2019-01-02</enddate>
+			<minResidents>2</minResidents>
+			<reqCW>false</reqCW>
+			<reqDW>false</reqDW>
+			<description>testDescription</description>
+			<owner>testComp</owner>
+			<members>
+				<member>
+					<name>123</name>
+					<eventpic/>
+					<totalVotes>0</totalVotes>
+					<positiveVotes>0</positiveVotes>
+				</member>
+				<member>
+					<name>ste</name>
+					<eventpic>../ressources/participant_pictures/3_ste.jpg</eventpic>
+					<totalVotes>0</totalVotes>
+					<positiveVotes>0</positiveVotes>
+				</member>
+			</members>
+		</event>
+		<event id="4">
+			<name>stefan</name>
+			<startdate>2019-03-07</startdate>
+			<enddate>2019-03-13</enddate>
+			<minResidents>3</minResidents>
+			<reqCW>false</reqCW>
+			<reqDW>false</reqDW>
+			<description>Stef</description>
+			<owner>testFirma</owner>
+			<members/>
+		</event>
+		<event id="5">
+			<name>awd</name>
+			<startdate>2019-02-27</startdate>
+			<enddate>2019-03-23</enddate>
+			<minResidents>3</minResidents>
+			<reqCW>false</reqCW>
+			<reqDW>false</reqDW>
+			<description>1</description>
+			<owner>stefkueng</owner>
+			<members/>
+		</event>
+		<event id="6">
+			<name>awd</name>
+			<startdate>2019-02-27</startdate>
+			<enddate>2019-03-23</enddate>
+			<minResidents>3</minResidents>
+			<reqCW>false</reqCW>
+			<reqDW>false</reqDW>
+			<description>1</description>
+			<owner>stefkueng</owner>
+			<members/>
+		</event>
+	</events>
+</wgchallenge>
